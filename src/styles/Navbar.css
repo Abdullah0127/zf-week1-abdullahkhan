@@ -1,0 +1,30 @@
+
+
+nav {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.nav-links a {
+
+    text-decoration: none;
+    padding: 0px 10px;
+    cursor: pointer;
+
+}
+
+.nav-links a:hover {
+
+    color: red;
+
+}
+
+.nav-links a:active {
+
+    color: red;
+
+}
