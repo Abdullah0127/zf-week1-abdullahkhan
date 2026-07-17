@@ -1,0 +1,126 @@
+.projects-section {
+    padding: 80px 8%;
+    background: #f8fafc;
+   
+}
+
+.projects-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-heading h1 {
+    font-size: 40px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.projects-heading p {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.project-card h2 {
+    color: #111827;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.project-card p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tech-badge {
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.github-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.github-btn:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+
+    .projects-section {
+        padding: 50px 20px;
+    }
+
+    .projects-heading h1 {
+        font-size: 32px;
+    }
+
+    .projects-heading p {
+        font-size: 16px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+}
+
+.dark .projects-section {
+    background: #111827;
+}
+
+.dark .projects-heading h1,
+.dark .projects-heading p {
+    color: white;
+}
+
+.dark .project-card {
+    background: #1f2937;
+    color: white;
+    border: 1px solid #374151;
+}
+.dark .tech-badge{
+    background-color: #2563eb;
+}
+.dark .project-card p, 
+.dark .project-card h2 {
+    color: #d1d5db;
+}

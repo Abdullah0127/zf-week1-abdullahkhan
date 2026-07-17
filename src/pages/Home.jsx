@@ -1,8 +1,15 @@
-import React from 'react'
+import { useEffect } from 'react'
+import Hero from '../components/Hero'
 
 function Home() {
+
+  useEffect(()=>{
+    document.title = "Abdullah Khan | Home";
+  }, [])
   return (
-    <div>Home</div>
+    <div>
+      <Hero/>
+    </div>
   )
 }
 

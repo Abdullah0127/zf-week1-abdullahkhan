@@ -1,30 +1,191 @@
-
+/* ===========================
+   Navbar
+=========================== */
 
 nav {
-    padding: 20px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    padding: 18px 8%;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .nav-links a {
-
     text-decoration: none;
-    padding: 0px 10px;
-    cursor: pointer;
-
+    color: #111827;
+    font-weight: 600;
+    transition: .3s;
 }
 
 .nav-links a:hover {
-
-    color: red;
-
+    color: #2563eb;
 }
 
-.nav-links a:active {
+/* Right Side */
 
-    color: red;
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hamburger */
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===========================
+   Switch
+=========================== */
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: var(--background);
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    left: 10%;
+    bottom: 15%;
+    border-radius: 50%;
+    background: var(--background);
+    box-shadow: inset 8px -4px 0 #fff000;
+    transition: .4s;
+}
+
+.switch input:checked + .slider {
+    background: #522ba7;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0 15px #fff000;
+}
+
+/* ===========================
+   Dark Mode
+=========================== */
+
+.dark {
+    background: #111827;
+    color: white;
+    min-height: 100vh;
+}
+
+.dark nav {
+    background: #111827;
+    border-bottom: 1px solid #374151;
+}
+
+.dark .logo h3,
+.dark .nav-links a {
+    color: white;
+}
+
+.dark .nav-links a:hover {
+    color: #60a5fa;
+}
+
+.dark .nav-links {
+    background: #111827;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px) {
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    .logo h3 {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+
+        padding: 30px 0;
+
+        transform: translateY(-150%);
+        transition: .3s ease;
+
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .dark .nav-links {
+        background: #111827;
+        border-bottom: 1px solid #374151;
+    }
+
+    .right-side {
+        gap: 15px;
+    }
 
 }

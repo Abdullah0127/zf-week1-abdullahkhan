@@ -1,9 +1,12 @@
-import React from 'react'
+import "../styles/SkillBadge.css";
 
-function SkillBadge() {
+function SkillBadge({ name, icon: Icon }) {
   return (
-    <div>SkillBadge</div>
-  )
+    <div className="skill-badge">
+      <Icon className="skill-icon" />
+      <span>{name}</span>
+    </div>
+  );
 }
 
-export default SkillBadge
+export default SkillBadge;
